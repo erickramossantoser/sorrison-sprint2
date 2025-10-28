@@ -173,3 +173,22 @@ section {
 .mb-4 { margin-bottom: 2rem; }
 .mt-4 { margin-top: 2rem; }
 .hidden { display: none; }
+/* Feature Items */
+.feature-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
