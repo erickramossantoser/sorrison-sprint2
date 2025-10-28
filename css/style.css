@@ -581,3 +581,14 @@ textarea.form-control {
         font-size: 3rem;
     }
 }
+/* Mensagens de Erro */
+.error-message {
+    color: var(--error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.form-control.error {
+    border-color: var(--error);
+}
