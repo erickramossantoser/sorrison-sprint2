@@ -592,3 +592,27 @@ textarea.form-control {
 .form-control.error {
     border-color: var(--error);
 }
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visível para navegação por teclado */
+a:focus-visible, button:focus-visible, .form-control:focus-visible, .faq-question:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #0056b3;
+        --secondary: #00875a;
+        --text: #000000;
+        --dark: #000000;
+    }
+}
