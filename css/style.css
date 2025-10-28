@@ -616,3 +616,43 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible, .faq-questio
         --dark: #000000;
     }
 }
+/* Melhorias nas interações de hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Card hover effects */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Modo escuro (opcional) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .card, .team-member, .feature-item, .faq-item, .contact-form {
+        background: #2d2d2d;
+        color: #e0e0e0;
+    }
+    
+    .form-control {
+        background: #3d3d3d;
+        border-color: #555;
+        color: #e0e0e0;
+    }
+}

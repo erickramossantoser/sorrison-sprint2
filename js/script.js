@@ -68,3 +68,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+// Adicionar interação aos itens do FAQ
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+    item.addEventListener('toggle', function() {
+        if (this.open) {
+            // Fechar outros itens abertos (comportamento de accordion)
+            faqItems.forEach(otherItem => {
+                if (otherItem !== this && otherItem.open) {
+                    otherItem.open = false;
+                }
+            });
+        }
+    });
+});
