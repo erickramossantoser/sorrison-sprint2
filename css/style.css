@@ -230,3 +230,82 @@ footer {
     color: #bdc3c7;
     font-size: 0.9rem;
 }
+/* Páginas Internas */
+.page-content {
+    padding: 5rem 0;
+}
+
+.page-header {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--light);
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Roadmap */
+.roadmap-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.roadmap-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 4px;
+    background: var(--primary);
+}
+
+.roadmap-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 60px;
+}
+
+.roadmap-item::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px var(--primary);
+}
+
+.roadmap-date {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
