@@ -656,3 +656,140 @@ nav ul li a:hover::after {
         color: #e0e0e0;
     }
 }
+
+
+/* ------------------ Ajustes de layout e responsividade ------------------ */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #111;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: background 200ms ease, transform 120ms ease;
+}
+
+nav a:hover {
+    background: rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+}
+
+/* Botão de menu mobile (hamburger) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Ajustes para hero */
+.hero {
+    padding: 3rem 0;
+    text-align: left;
+}
+
+.hero-buttons {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    background: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 160ms ease, transform 120ms ease;
+}
+
+.btn:hover { opacity: 0.95; transform: translateY(-2px); }
+
+.btn-secondary {
+    background: transparent;
+    color: #0077cc;
+    border: 2px solid #0077cc;
+}
+
+/* Grid de features */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* Footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+/* Pequenas melhorias de acessibilidade */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid rgba(0,119,204,0.18);
+    outline-offset: 2px;
+}
+
+/* ------------------ Responsividade ------------------ */
+@media (max-width: 900px) {
+    .features-grid { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; }
+    nav ul { display: none; }
+    .menu-toggle { display: inline-flex; align-items: center; }
+}
+
+/* Menu móvel aberto */
+nav.open ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+/* Melhor visual para formulários */
+.contact-form .form-control {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Ajustes para dark-mode reduzido (mantendo visual) */
+@media (prefers-color-scheme: dark) {
+    body { background: #0f0f10; color: #e6e6e6; }
+    .feature-item, .card { background: #121212; box-shadow: none; }
+}
